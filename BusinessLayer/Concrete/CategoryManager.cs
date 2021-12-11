@@ -1,0 +1,54 @@
+﻿using BusinessLayer.Abstract;
+using DataAccesLayer.Abstract;
+using DataAccesLayer.EntitiyFramework;
+using EntityLayer.Concrete;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BusinessLayer.Concrete
+{
+    //business katmanında abstract klasörü içerisindeki kalsörler servistir
+    //business katmanında conrete klasörü içerisindeki yer alan sınıflar manager olarak adlandırılır.
+    //Business katmanın içerisinde validation yapılacak geçerlilik kuralları
+    public class CategoryManager : ICategoryService
+    {
+        ICategoryDal _categoryDal;
+       
+        public CategoryManager(ICategoryDal categoryDal)
+        {
+            _categoryDal = categoryDal;
+        }
+
+        public void CategoryAdd(Category category)
+        {
+            _categoryDal.Insert(category);
+
+        }
+
+        public void CategoryDelete(Category category)
+        {
+            _categoryDal.Delete(category);
+
+
+        }
+
+        public void CategoryUpdate(Category category)
+        {
+            _categoryDal.Update(category);
+
+        }
+
+        public Category GetById(int id)
+        {
+            return _categoryDal.GetByID(id);
+        }
+
+        public List<Category> GetList()
+        {
+            return _categoryDal.GetListAll();
+        }
+    }
+}

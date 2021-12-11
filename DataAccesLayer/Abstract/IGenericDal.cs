@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace DataAccesLayer.Abstract
 {
     //T-->entitty bir clasa ait tüm nitelikleri kullanacak
-    interface IGenericDal<T>where T:class
+  public  interface IGenericDal<T>where T:class
     {
         void Insert(T t);
         void Delete(T t);

@@ -7,9 +7,7 @@ using System.Threading.Tasks;
 
 namespace DataAccesLayer.Abstract
 {
-    public interface ICategoryDal:IGenericDal<Category>
+   public interface IAboutDal:IGenericDal<About>
     {
-       
-
     }
 }
