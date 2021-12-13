@@ -1,0 +1,43 @@
+﻿
+@{
+    Layout = null;
+}
+<!--Partialview çağırıcaz-->
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Trendy Blog a Blogging Category Bootstrap Responsive Website Template  | Home :: w3layouts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Trendy Blog Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- Custom Theme files -->
+    <link href="~/tema2/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/tema2/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- js -->
+    <script src="~/tema2/js/jquery-1.11.1.min.js"></script>
+    <!-- //js -->
+    <link href='//fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <!-- banner -->
+    @await Html.PartialAsync("Partial1");<!-- Shared içinden çağırman lazım aynı yerden olmalı -->>
+    <!-- banner -->
+    <!-- banner-bottom -->
+    <div class="banner-bottom">
+        <!--Burayı kestim-->
+        @RenderBody();
+    </div>
+    <!-- //banner-bottom -->
+    <!-- footer -->
+    @await Html.PartialAsync("FooterPartial");<!-- Shared içinden çağırman lazım aynı yerden olmalı -->>
+    <!-- //footer -->
+    <!-- for bootstrap working -->
+    <script src="~/tema2/js/bootstrap.js"></script>
+    <!-- //for bootstrap working -->
+</body>
+</html>
+@RenderBody();
