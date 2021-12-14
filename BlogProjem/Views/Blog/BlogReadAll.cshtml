@@ -1,0 +1,184 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Blog>
+@{
+    ViewData["Title"] = "BlogDetails";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+
+
+<body>
+    
+    <!-- single -->
+    <div class="single">
+        <div class="container">
+     @foreach(var item in Model) { 
+            <div class="single-grid">
+                
+                <div class="col-md-8 blog-left">
+
+                    <div class="blog-left-grid">
+                        <div class="blog-leftl">
+                            <h4>@(((DateTime)item.BlogCreateDate).ToString("dddd")) <span>@(((DateTime)item.BlogCreateDate).ToString("dd"))</span></h4>
+                            <a href="#"><i class="glyphicon glyphicon-tags" aria-hidden="true"></i>10</a>
+                        </div>
+                        <div class="blog-leftr">
+
+                            <img src="@item.BlogImage" alt=" " class="img-responsive" />
+
+                            <p>
+                                @item.BlogContent
+                            </p>
+                            <ul>
+                                <li><a href="#"><i class="glyphicon glyphicon-user" aria-hidden="true"></i>User Name</a></li>
+                                <li><a href="#"><i class="glyphicon glyphicon-tags" aria-hidden="true"></i>0 Tages</a></li>
+                                <li><a href="#"><i class="glyphicon glyphicon-comment" aria-hidden="true"></i>0 Comments</a></li>
+                            </ul>
+                        </div>
+                        <div class="clearfix"> </div>
+                        <div class="admin-text">
+                            <h5>Written By Admin Name</h5>
+                            <div class="admin-text-left">
+                                <a href="#"><img src="~/tema2/images/icon1.png" alt="" /></a>
+                            </div>
+                            <div class="admin-text-right">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,There are many variations of passages of Lorem Ipsum available,
+                                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                </p>
+                                <span>View all posts by:<a href="#"> Admin </a></span>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
+                        @await Html.PartialAsync("/Views/Comment/CommentListByBlog.cshtml")
+                        @await Html.PartialAsync("/Views/Comment/PartialAddComment.cshtml")
+
+                    </div>
+                </div>
+                <div class="col-md-4 blog-right">
+                    <h3>Kategoriler</h3>
+                    <ul>
+                        <li><a href="#">Aliquam erat volutpat</a></li>
+                        <li><a href="#">Integer rutrum ante eu lacus</a></li>
+                        <li><a href="#">Cum sociis natoque penatibus</a></li>
+                        <li><a href="#">Mauris fermentum dictum magna</a></li>
+                        <li><a href="#">Sed laoreet aliquam leo</a></li>
+                        <li><a href="#">Cum sociis natoque penatibus</a></li>
+                    </ul>
+                    <div class="recent">
+                        <h3>Son Yorumlar</h3>
+                        <div class="recent-grids">
+                            <div class="recent-grid">
+                                <div class="wom">
+                                    <a href="#"><img src="~/tema2/images/6.jpg" alt=" " class="img-responsive" /></a>
+                                </div>
+                                <div class="wom-right">
+                                    <h4><a href="#">Integer rutrum ante eu</a></h4>
+                                    <p>
+                                        Mauris fermentum dictum magna. Sed laoreet aliquam leo.
+                                        Ut tellus dolor, dapibus eget.
+                                    </p>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                            <div class="recent-grid">
+                                <div class="wom">
+                                    <a href="#"><img src="~/tema2/images/7.jpg" alt=" " class="img-responsive" /></a>
+                                </div>
+                                <div class="wom-right">
+                                    <h4><a href="#">Integer rutrum ante eu</a></h4>
+                                    <p>
+                                        Mauris fermentum dictum magna. Sed laoreet aliquam leo.
+                                        Ut tellus dolor, dapibus eget.
+                                    </p>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                            <div class="recent-grid">
+                                <div class="wom">
+                                    <a href="#"><img src="~/tema2/images/8.jpg" alt=" " class="img-responsive" /></a>
+                                </div>
+                                <div class="wom-right">
+                                    <h4><a href="#">Integer rutrum ante eu</a></h4>
+                                    <p>
+                                        Mauris fermentum dictum magna. Sed laoreet aliquam leo.
+                                        Ut tellus dolor, dapibus eget.
+                                    </p>
+                                </div>
+                                <div class="clearfix"> </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer-top-grid1">
+                        <h3>Son postlar</h3>
+                        <ul class="tag2">
+                            <li><a href="#">awesome</a></li>
+                            <li><a href="#">strategy</a></li>
+                            <li><a href="#">development</a></li>
+                        </ul>
+                        <ul class="tag2">
+                            <li><a href="#">css</a></li>
+                            <li><a href="#">photoshop</a></li>
+                            <li><a href="#">photography</a></li>
+                            <li><a href="#">html</a></li>
+                        </ul>
+                        <ul class="tag2">
+                            <li><a href="#">awesome</a></li>
+                            <li><a href="#">strategy</a></li>
+                            <li><a href="#">development</a></li>
+                        </ul>
+                        <ul class="tag2">
+                            <li><a href="#">css</a></li>
+                            <li><a href="#">photoshop</a></li>
+                            <li><a href="#">photography</a></li>
+                            <li><a href="#">html</a></li>
+                        </ul>
+                        <ul class="tag2">
+                            <li><a href="#">awesome</a></li>
+                            <li><a href="#">strategy</a></li>
+                            <li><a href="#">development</a></li>
+                        </ul>
+                    </div>
+                    <div class="poll">
+                        <h3>Poll</h3>
+                        <div class="progress p">
+                            <div class="progress-bar bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+                                60%
+                            </div>
+                        </div>
+                        <div class="progress p">
+                            <div class="progress-bar bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+                                80%
+                            </div>
+                        </div>
+                        <div class="progress p">
+                            <div class="progress-bar bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 90%;">
+                                90%
+                            </div>
+                        </div>
+                        <div class="progress p">
+                            <div class="progress-bar bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                                40%
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+     }
+        </div>
+    </div>
+    <!-- //single -->
+   
+    <!-- for bootstrap working -->
+    <script src="js/bootstrap.js"></script>
+    <!-- //for bootstrap working -->
+</body>
+</html>
