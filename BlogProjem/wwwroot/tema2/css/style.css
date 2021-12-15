@@ -4,8 +4,15 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
+.BlogBaslik {
+	font-family: "PT Sans" !important;
+	text-align:start;
+}
 
-html, body {
+
+
+	html, body
+{
 	font-size: 100%;
 	background: #fff;
 	font-family: 'Oswald', sans-serif;
@@ -18,7 +25,7 @@ p {
 h1, h2, h3, h4, h5, h6, a {
 	font-family: 'Oswald', sans-serif;
 	font-weight: 100;
-	margin: 0;
+	margin: 100;
 }
 
 ul, label {
@@ -2410,7 +2417,7 @@ ul.wmuSliderPagination {
 /*-- //breaking-news --*/
 /*-- contact --*/
 .typo, .contact, .slicebox-slider, .single {
-	padding: 5em 0;
+	padding: 0.5em 0;
 }
 
 h3.title, .map h3 {

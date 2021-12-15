@@ -1,0 +1,15 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Blog>
+
+<div class="footer-top-grid1">
+    <h3>Son postlar</h3>
+    <ul class="tag2">
+        @foreach (var item in Model)
+        {
+
+            <li><a href="#">@item.BlogTitle</a></li>
+
+
+        }
+    </ul>
+
+    </div>

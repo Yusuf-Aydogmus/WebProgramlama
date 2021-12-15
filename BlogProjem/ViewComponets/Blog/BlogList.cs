@@ -6,14 +6,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BlogProjem.ViewComponets.Comments
+namespace BlogProjem.ViewComponets.Blog
 {
-    public class CommentListByBlog: ViewComponent
+    public class BlogList:ViewComponent
     {
-        CommentManager cm = new CommentManager(new EFCommentRepository());
-        public IViewComponentResult Invoke(int id) 
+
+        BlogManager bm_ = new BlogManager(new EFBlogRepository());
+
+        public IViewComponentResult Invoke()
         {
-            var values = cm.GetList(id);
+            var values = bm_.GetList();
             return View(values);
         }
     }
