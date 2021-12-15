@@ -1,0 +1,27 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Comment>
+<div class="response">
+    <h4>Yorumlar</h4>
+    @foreach (var item in Model)
+    {
+<div class="media response-info">
+    <div class="media-left response-text-left">
+        <a href="#">
+            <img class="media-object" src="~/tema2/images/icon1.png" alt="" />
+        </a>
+        <h5><a href="#">@item.CommentUserName</a></h5>
+    </div>
+    <div class="media-body response-text-left">
+        <ul>
+            <li class="m-auto"> <h2 class="text-success text-center font-weight-bold border-info d-block p-2 bg-success text-white">@item.CommentTitle</h2></li>
+            <li class=" m-auto">  <p>@item.CommentContent</li>
+         </ul>
+
+        <ul>
+            <li>@(((DateTime)item.CommentDate).ToString("f"))</li>
+            <li><a href="single.html">Reply</a></li>
+        </ul>
+    </div>
+    <div class="clearfix"> </div>
+</div>
+    }
+</div>

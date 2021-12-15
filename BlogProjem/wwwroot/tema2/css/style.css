@@ -3212,6 +3212,10 @@ img.mobile1 {
 .media-left a img {
 	width: initial;
 }
+#YorumBaslik {
+	color:forestgreen;
+
+}
 
 .coment-form input[type="text"], .coment-form textarea, .coment-form input[type="email"] {
 	display: block;
