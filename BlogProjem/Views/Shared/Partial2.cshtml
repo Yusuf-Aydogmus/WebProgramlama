@@ -1,1 +1,73 @@
 ﻿
+<head>
+    <title>Trendy Blog a Blogging Category Bootstrap Responsive Website Template | Single :: w3layouts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Trendy Blog Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- Custom Theme files -->
+    <link href="../tema2/css/loginstyle.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- js -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!-- //js -->
+</head>
+
+<br>
+<br>
+<form method="post">
+    <div class="cont">
+        <div class="form sign-in">
+            <h2>HosGeldiniz</h2>
+            <label>
+                <span>Email</span>
+                <input type="email" />
+            </label>
+            <label>
+                <span>Sifre</span>
+                <input type="password" />
+            </label>
+            <p class="forgot-pass">Sifremi Unuttum ?</p>
+            <button type="button" class="submit">Sign In</button>
+
+        </div>
+        <div class="sub-cont">
+            <div class="img">
+                <div class="img__text m--up">
+
+                    <h3>Hesabiniz Yok mu ? Hemen Olusturun !</h3>
+                </div>
+                <div class="img__text m--in">
+
+                    <h3>Hesabiniz var mi ? Giris Yapin.</h3>
+                </div>
+                <div class="img__btn">
+                    <span class="m--up">Kayit ol </span>
+                    <span class="m--in">Giris Yap</span>
+                </div>
+            </div>
+            <div class="form sign-up">
+                <h2>Hesap Olusturun</h2>
+                <label>
+                    <span>Ad</span>
+                    <input type="text" name="WriterName" />
+                </label>
+                <label>
+                    <span>Email</span>
+                    <input type="email" name="WriterMail" />
+                </label>
+                <label>
+                    <span>Sifre</span>
+                    <input type="password" name="WriterPassword" />
+                </label>
+                <button type="button" class="btn btn-primary submit mb-4">Register</button>
+
+            </div>
+        </div>
+    </div>
+</form>
+<script>
+    document.querySelector('.img__btn').addEventListener('click', function () {
+        document.querySelector('.cont').classList.toggle('s--signup');
+    });
+</script>

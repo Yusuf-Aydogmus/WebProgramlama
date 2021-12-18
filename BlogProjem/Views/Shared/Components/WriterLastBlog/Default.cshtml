@@ -1,0 +1,25 @@
+﻿@using EntityLayer.Concrete
+@model List<Blog>
+<div class="recent">
+    <h3>Yazara Ait Diğer Postlar</h3>
+    @foreach (var item in Model)
+    {
+        <div class="recent-grids">
+            <div class="recent-grid">
+                <div class="wom">
+                    <a href="#"><img src="@item.BlogImage" alt=" " class="img-responsive" /></a>
+                </div>
+                <div class="wom-right">
+                    <h4><a href="#">@item.BlogTitle</a></h4>
+                    <p>
+                        @item.BlogContent
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    }
+    <div class="clearfix"> </div>
+
+
+</div>

@@ -2,7 +2,7 @@
 @{
     Layout = null;
 }
-<!--Partialview çağırıcaz-->
+
 
 <!DOCTYPE HTML>
 <html>
@@ -24,7 +24,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <body>
     <!-- banner -->
-    @await Html.PartialAsync("Partial1");<!-- Shared içinden çağırman lazım aynı yerden olmalı -->>
+    @await Html.PartialAsync("Partial1") @*Shared içinden çağırman lazım aynı yerden olmalı*@
+    <!-- Html.PartialAsync("Partial3") Shared içinden çağırman lazım aynı yerden olmalı
+
     <!-- banner -->
     <!-- banner-bottom -->
     <div class="banner-bottom">
@@ -33,7 +35,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </div>
     <!-- //banner-bottom -->
     <!-- footer -->
-    @await Html.PartialAsync("FooterPartial");<!-- Shared içinden çağırman lazım aynı yerden olmalı -->>
+    @await Html.PartialAsync("FooterPartial") <!-- Shared içinden çağırman lazım aynı yerden olmalı --><!-->-->
     <!-- //footer -->
     <!-- for bootstrap working -->
     <script src="~/tema2/js/bootstrap.js"></script>

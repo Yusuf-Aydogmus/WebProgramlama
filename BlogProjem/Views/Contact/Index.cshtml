@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+
+
+<body>
+    <!-- banner -->
+   
+    <!-- //banner -->
+    <!-- contact -->
+    <div class="contact">
+        <div class="container">
+            <div class="map">
+                <h3>Yerleşim Yerimiz</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.9087670788713!2d30.330542315405847!3d40.7420329793286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ccadf2977958d7%3A0xc7996fa884f94c03!2sSakarya%20%C3%9Cniversitesi!5e0!3m2!1str!2str!4v1639858318055!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>            </div>
+            <div class="contact-grids">
+                <div class="col-md-3 contact-grid">
+                    <div class="call">
+                        <div class="col-xs-3 contact-grdl">
+                            <span class="glyphicon glyphicon-phone" aria-hidden="true"></span>
+                        </div>
+                        <div class="col-xs-9 contact-grdr">
+                            <ul>
+                                <li>+0555 555 55 55</li>
+                                <li>+5356 890 679</li>
+                            </ul>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="address">
+                        <div class="col-xs-3 contact-grdl">
+                            <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+                        </div>
+                        <div class="col-xs-9 contact-grdr">
+                            <ul>
+                                <li>Esentepe ,Kampüs</li>
+                                <li>Sakarya</li>
+                            </ul>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                    <div class="mail">
+                        <div class="col-xs-3 contact-grdl">
+                            <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                        </div>
+                        <div class="col-xs-9 contact-grdr">
+                            <ul>
+                                <li><a href="mailto:yuzarsif349@yandex.com">yuzarsif349@yandex.com</a></li>
+                            </ul>
+                        </div>
+                        <div class="clearfix"> </div>
+                    </div>
+                </div>
+                <div class="col-md-5 contact-grid">
+                    <form method="post">
+                        <input type="text" name="ContactUserName" required="" placeholder="Ad">
+                        <input type="email"  name="ContactMail" required="" placeholder="Mail">
+                        <input type="text"  name="ContactSubject" required="" placeholder="Konu">
+                        <textarea type="text" name="ContactMessage" required="" placeholder="Mesajınız"></textarea>
+                        <input type="submit" value="Gönder">
+                    </form>
+                </div>
+                <div class="col-md-4 contact-grid">
+
+                    @await Html.PartialAsync("~/Views/NewsLetter/SubscribeMail.cshtml")
+                </div>
+                <div class="clearfix"> </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

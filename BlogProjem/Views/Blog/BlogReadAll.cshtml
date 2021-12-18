@@ -71,51 +71,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </div>
                     <div class="col-md-4 blog-right">
                         @await Component.InvokeAsync("CategoryList")
-
-                        <div class="recent">
-                            <h3>Son Yorumlar</h3>
-                            <div class="recent-grids">
-                                <div class="recent-grid">
-                                    <div class="wom">
-                                        <a href="#"><img src="~/tema2/images/6.jpg" alt=" " class="img-responsive" /></a>
-                                    </div>
-                                    <div class="wom-right">
-                                        <h4><a href="#">Integer rutrum ante eu</a></h4>
-                                        <p>
-                                            Mauris fermentum dictum magna. Sed laoreet aliquam leo.
-                                            Ut tellus dolor, dapibus eget.
-                                        </p>
-                                    </div>
-                                    <div class="clearfix"> </div>
-                                </div>
-                                <div class="recent-grid">
-                                    <div class="wom">
-                                        <a href="#"><img src="~/tema2/images/7.jpg" alt=" " class="img-responsive" /></a>
-                                    </div>
-                                    <div class="wom-right">
-                                        <h4><a href="#">Integer rutrum ante eu</a></h4>
-                                        <p>
-                                            Mauris fermentum dictum magna. Sed laoreet aliquam leo.
-                                            Ut tellus dolor, dapibus eget.
-                                        </p>
-                                    </div>
-                                    <div class="clearfix"> </div>
-                                </div>
-                                <div class="recent-grid">
-                                    <div class="wom">
-                                        <a href="#"><img src="~/tema2/images/8.jpg" alt=" " class="img-responsive" /></a>
-                                    </div>
-                                    <div class="wom-right">
-                                        <h4><a href="#">Integer rutrum ante eu</a></h4>
-                                        <p>
-                                            Mauris fermentum dictum magna. Sed laoreet aliquam leo.
-                                            Ut tellus dolor, dapibus eget.
-                                        </p>
-                                    </div>
-                                    <div class="clearfix"> </div>
-                                </div>
-                            </div>
-                        </div>
+                        @await Component.InvokeAsync("WriterLastBlog") 
                         @await Component.InvokeAsync("BlogList")
                         <div class="poll">
                             <h3>Poll</h3>
