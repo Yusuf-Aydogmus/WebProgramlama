@@ -12,26 +12,19 @@
         
             <div class="col-md-6 footer-grid-left">
                 <h3>iletişim</h3>
-                <form>
-                    <input type="text" value="enter your full name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'enter your full name';}" required="">
-                    <input type="email" value="enter your email address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'enter your email address';}" required="">
-                    <textarea onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message...';}" required="">Message...</textarea>
-                    <input type="submit" value="Submit">
-                </form>
+ 
+                <a asp-controller="Contact" asp-action="Index"><button type="button" class="btn btn-danger btn-lg">İletişim Kur</button></a>
+             
+              
             </div>
             <div class="col-md-6 footer-grid-left">
                 <h3>hakkımızda</h3>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
-                    <span>
-                        But I must explain to you how all this mistaken idea of denouncing
-                        pleasure and praising pain was born and I will give you a complete
-                        account of the system, and expound the actual teachings of the
-                        great explorer.
+                    İnşaat işçileri tüm ev için ayrıntılı bir plan yapmadan önce duvar örmeye başlıyor mu? Elbette hayır. Beton mikserinin kalıplara beton dökmesi gibi sizde içeriğinizi sayfaya boşaltmaya başlamadan önce "Hakkımızda" sayfanızın yapısı ve tasarımı ile ilgili genel bir fikre sahip olmalısınız. Hakkımızda yazısı sitenizde başka nereye koyacağınızı bilemediğiniz içeriklerden oluşan bir bulamaç olmamalıdır.
+
+
                     </span>
-                    <i>- The Entire TLG Team</i>
+                    <i><a class="#1ABC9C" asp-controller="About" asp-action="Index">Hakkımızda</></a></i>
                 </p>
             </div>
             <div class="clearfix"> </div>

@@ -5,8 +5,8 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 .section {
-	background: url('../images/a.jpg') no-repeat -11px -16px;
 	
+	margin-top:-30px !important;
 	padding-top:20px;
 	padding-bottom:20px;
 }
@@ -1685,7 +1685,6 @@ a.high {
 
 		.footer-top-w3layouts-agile p:before {
 			position: absolute;
-			top: -63%;
 			left: 0%;
 			background: url(../images/img-sp.png) no-repeat -58px -148px;
 			display: block;
