@@ -1,8 +1,38 @@
-﻿
+﻿@model EntityLayer.Concrete.Writer
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/UserLayout.cshtml";
 }
 
-<h1>Index</h1>
+<head>
+    <title>Trendy Blog a Blogging Category Bootstrap Responsive Website Template | Single :: w3layouts</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Trendy Blog Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- Custom Theme files -->
+    <link href="../tema2/css/loginstyle.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- js -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!-- //js -->
+</head>
+<div class="cont">
+    <form method="post">
+        <div class="form sign-in center-block">
 
+            <h2>Hos Geldiniz</h2>
+            <label>
+                <span>Email</span>
+                <input type="email" name="WriterMail" />
+            </label>
+            <label>
+                <span>Sifre</span>
+                <input type="password" name="WriterPassword" />
+            </label>
+            <p class="forgot-pass">Sifremi Unuttum ?</p>
+            <button type="submit" class="submit">Sign In</button>
+
+        </div>
+    </form>
+</div>

@@ -48,7 +48,7 @@
 <head>
     
     <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="~/navbar/style.css">
 
 </head>
@@ -62,22 +62,25 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
                 <div class="hori-selector"><div class="left"></div><div class="right"></div></div>
-                <li class="nav-item active">
-                    <a class="nav-link" asp-controller="Blog" asp-action="Index" ><i class="fas fa-home"></i>Anasayfa</a>
+                <li asp class="nav-item active">
+                    <a class="nav-link" asp-controller="Blog" asp-action="Index"><i class="fas fa-home"></i>Anasayfa</a>
                 </li>
                 <li class="nav-item ">
-                    <a class="nav-link"  asp-controller="Blog" asp-action="Index" ><i class="far fa-address-book"></i>Bloklar </a>
+                    <a class="nav-link" asp-controller="Blog" asp-action="Index"><i class="far fa-address-book"></i>Bloklar </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" asp-controller="About" asp-action="Index"><i class="far fa-a"></i>Hakkımda</a>
-                </li>
-                <li class="nav-item">    
-                    <a class="nav-link" asp-action="Index" asp-controller="Register"><i class="far fa-calendar-alt"></i>Giriş Yap & Kayıt OL</a>
+                    <a class="nav-link" asp-controller="About" asp-action="Index"><i class="fas fa-home"></i>Hakkımda</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" asp-controller="Contact" asp-action="Index"><i class="far fa-chart-bar"></i>İletişim</a>
+                    <a class="nav-link" asp-action="Index" asp-controller="Register"><i class="fa fa-floppy-o" aria-hidden="true"></i> Kayıt OL</a>
                 </li>
-                
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="Index" asp-controller="Login"><i class="fa fa-user" aria-hidden="true"></i>Giriş Yap</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-controller="Contact" asp-action="Index"><i class="fa fa-phone-square" aria-hidden="true"></i>İletişim</a>
+                </li>
+
             </ul>
         </div>
     </nav>
