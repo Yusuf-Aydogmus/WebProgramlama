@@ -76,9 +76,10 @@ namespace BlogProjem
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
+            app.UseAuthentication();
             app.UseSession();
 
-            app.UseAuthentication();
+           
 
             app.UseRouting();
 

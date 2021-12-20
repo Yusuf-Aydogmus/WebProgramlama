@@ -12,26 +12,27 @@ using System.Threading.Tasks;
 
 namespace BlogProjem.Controllers
 {
-    
+    [AllowAnonymous]
     public class LoginController : Controller
     {
-        [AllowAnonymous]
+     
 
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
         }
         [HttpPost]
-        [AllowAnonymous]
-        public async Task<IActionResult> Index(Writer p)
+      
+        public async Task<IActionResult> Index(Writer param)
         {
             Context c = new Context();
-            var datavalue = c.Writers.FirstOrDefault(x => x.WriterMail == p.WriterMail && x.WriterPassword == p.WriterPassword);
+            var datavalue = c.Writers.FirstOrDefault(x => x.WriterMail == param.WriterMail && x.WriterPassword == param.WriterPassword);
             if (datavalue != null)
             { //cliam-->Rollerin dışında kullanıcı hakkında bilgi tutmamızı ve bu bilgilere göre yetkilendirme yapmamızı sağlayan yapılardır.
                 var claims = new List<Claim>
                 {
-                    new Claim(ClaimTypes.Name,p.WriterMail)
+                    new Claim(ClaimTypes.Name,param.WriterMail)
 
                 };
 
