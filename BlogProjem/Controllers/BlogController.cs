@@ -75,6 +75,19 @@ namespace BlogProjem.Controllers
             blogManager.GDelete(deletingBlog);
             return RedirectToAction("BlogListByWriter");
         }
-       
+        [HttpGet]
+        public IActionResult EditBlog(int id)
+        {
+
+            var editingBlog = blogManager.GGetById(id);
+            GetCategoryList();
+            return View(editingBlog);
+        }
+        [HttpPost]
+        public IActionResult EditBlog(Blog blog)
+        {
+            blogManager.GUpdate(blog);
+            return RedirectToAction("BlogListByWriter");
+        }
     }
 }
