@@ -30,7 +30,7 @@ namespace BlogProjem.Controllers
         }
         public IActionResult BlogListByWriter()
         {
-           var values= blogManager.GetBlogListByWriter(2);
+            var values = blogManager.GetListWithCategoryByWriterBM(2);
 
             return View(values);
         }
@@ -57,6 +57,7 @@ namespace BlogProjem.Controllers
            GetCategoryList();
             return View();
         }
+
         public void GetCategoryList()
         {
             CategoryManager cm = new CategoryManager(new EFCategoryRepository());
@@ -68,5 +69,12 @@ namespace BlogProjem.Controllers
                                                    }).ToList();
             ViewBag.CategoryList = CategoryValues;
         }
+        public IActionResult DeleteBlog(int id)
+        {
+            var deletingBlog = blogManager.GGetById(id);
+            blogManager.GDelete(deletingBlog);
+            return RedirectToAction("BlogListByWriter");
+        }
+       
     }
 }
