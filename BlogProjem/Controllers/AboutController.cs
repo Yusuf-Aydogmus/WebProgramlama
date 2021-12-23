@@ -13,7 +13,7 @@ namespace BlogProjem.Controllers
         AboutManager abm = new AboutManager(new EFAboutRepository());
         public IActionResult Index()
         {
-            var values = abm.Getlist();
+            var values = abm.GGetList();
             return View(values);
         }
     }

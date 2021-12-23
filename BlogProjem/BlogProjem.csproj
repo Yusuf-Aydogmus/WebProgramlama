@@ -27,6 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Views\Shared\Components\Category\" />
     <Folder Include="wwwroot\Login\css\" />
   </ItemGroup>
 

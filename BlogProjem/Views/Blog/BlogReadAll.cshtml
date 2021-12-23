@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<EntityLayer.Concrete.Blog>
+
 @{
     ViewData["Title"] = "BlogDetails";
     Layout = "~/Views/Shared/UserLayout.cshtml";
@@ -15,18 +16,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 
 <body>
-    
+
     <!-- single -->
     <div class="single">
         <div class="container">
-          
+
             @foreach (var item in Model)
             {
-            <div class="BlogBaslik">
-                <div><h1 class="text-left text-uppercase font-weight-bold text-white p-2">@item.BlogTitle</h1></div>
-            </div>
+                <div class="BlogBaslik">
+                    <div><h1 class="text-left text-uppercase font-weight-bold text-white p-2">@item.BlogTitle</h1></div>
+                </div>
                 <div class="single-grid">
-             
+
                     <div class="col-md-8 blog-left">
 
                         <div class="blog-left-grid">
@@ -62,7 +63,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 </div>
                                 <div class="clearfix"> </div>
                             </div>
-                            
+
                             @await Component.InvokeAsync("CommentListByBlog", new { id = ViewBag.i })
                             @*@await Html.PartialAsync("/Views/Comment/CommentListByBlog.cshtml") Hata Veriyor *@
                             @await Html.PartialAsync("/Views/Comment/PartialAddComment.cshtml")
@@ -71,7 +72,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </div>
                     <div class="col-md-4 blog-right">
                         @await Component.InvokeAsync("CategoryList")
-                        @await Component.InvokeAsync("WriterLastBlog") 
+                        @await Component.InvokeAsync("WriterLastBlog")
                         @await Component.InvokeAsync("BlogList")
                         <div class="poll">
                             <h3>Poll</h3>
@@ -103,7 +104,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </div>
     </div>
     <!-- //single -->
-   
     <!-- for bootstrap working -->
     <script src="js/bootstrap.js"></script>
     <!-- //for bootstrap working -->

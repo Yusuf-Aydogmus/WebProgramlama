@@ -1,4 +1,5 @@
-﻿using BusinessLayer.Concrete;
+﻿
+using BusinessLayer.Concrete;
 using DataAccesLayer.EntitiyFramework;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -13,7 +14,7 @@ namespace BlogProjem.Controllers
         CategoryManager cm = new CategoryManager(new EFCategoryRepository());
         public IActionResult Index()
         {
-            var values = cm.GetList();
+            var values = cm.GGetList();
             return View(values);
         }
     }

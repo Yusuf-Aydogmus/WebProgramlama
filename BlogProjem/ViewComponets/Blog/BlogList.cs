@@ -1,4 +1,5 @@
-﻿using BusinessLayer.Concrete;
+﻿
+using BusinessLayer.Concrete;
 using DataAccesLayer.EntitiyFramework;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -8,14 +9,14 @@ using System.Threading.Tasks;
 
 namespace BlogProjem.ViewComponets.Blog
 {
-    public class BlogList:ViewComponent
+    public class BlogList : ViewComponent
     {
 
-        BlogManager bm_ = new BlogManager(new EFBlogRepository());
+        BlogManager _bm = new BlogManager(new EFBlogRepository());
 
         public IViewComponentResult Invoke()
         {
-            var values = bm_.GetList();
+            var values = _bm.GetBlogListWithCategory();
             return View(values);
         }
     }

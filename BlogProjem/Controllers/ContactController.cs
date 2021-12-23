@@ -1,4 +1,5 @@
-﻿using BusinessLayer.Concrete;
+﻿
+using BusinessLayer.Concrete;
 using DataAccesLayer.EntitiyFramework;
 using EntityLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
@@ -24,7 +25,7 @@ namespace BlogProjem.Controllers
             m.ContactStatus = true;
             cm.ContactAdd(m);
             return RedirectToAction("Index", "Blog");
-           
+
         }
     }
 }

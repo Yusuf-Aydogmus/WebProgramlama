@@ -1,4 +1,5 @@
-﻿using DataAccesLayer.Abstract;
+﻿
+using DataAccesLayer.Abstract;
 using DataAccesLayer.Concrete;
 using DataAccesLayer.Repositories;
 using EntityLayer.Concrete;
@@ -15,8 +16,8 @@ namespace DataAccesLayer.EntitiyFramework
     {
         public List<Blog> GetListWithCategory()
         {
-            using (var c=new Context())
-                {
+            using (var c = new Context())
+            {
 
                 return c.Blogs.Include(x => x.Category).ToList();
 
