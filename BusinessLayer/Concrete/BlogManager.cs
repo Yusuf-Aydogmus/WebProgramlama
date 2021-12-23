@@ -50,6 +50,7 @@ namespace BusinessLayer.Concrete
 
         public void GUpdate(Blog t)
         {
+           
             _blogDal.Update(t);
         }
 

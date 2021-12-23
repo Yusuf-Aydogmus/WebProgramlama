@@ -32,7 +32,7 @@ namespace BlogProjem.Controllers
                 p.WriterAbout = "deneme";
                 p.WriterImage = "bos";
 
-                wm.WriterAdd(p);
+                wm.GAdd(p);
                 return RedirectToAction("Index", "Blog");
             }
             else 

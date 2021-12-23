@@ -86,6 +86,9 @@ namespace BlogProjem.Controllers
         [HttpPost]
         public IActionResult EditBlog(Blog blog)
         {
+            blog.WriterID = 2;
+            blog.BlogCreateDate = DateTime.Parse(DateTime.Now.ToShortDateString());
+
             blogManager.GUpdate(blog);
             return RedirectToAction("BlogListByWriter");
         }
