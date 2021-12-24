@@ -15,7 +15,8 @@ namespace BlogProjem.ViewComponets.Writer
         Context c = new Context();
         public IViewComponentResult Invoke()
         {
-            
+
+            var usermail = User.Identity.Name;
 
             var abouts = writerManager.GetWriterByID(2);
             return View(abouts);
