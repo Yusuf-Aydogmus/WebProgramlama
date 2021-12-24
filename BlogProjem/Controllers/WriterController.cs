@@ -1,6 +1,7 @@
 ﻿using BlogProjem.Models;
 using BusinessLayer.Concrete;
 using BusinessLayer.ValidationRules;
+using DataAccesLayer.Concrete;
 using DataAccesLayer.EntitiyFramework;
 using EntityLayer.Concrete;
 using FluentValidation.Results;
@@ -19,9 +20,14 @@ namespace BlogProjem.Controllers
     {
         WriterManager _writerManager = new WriterManager(new EFWriterRepository());
 
-        [AllowAnonymous]
+        [Authorize]
         public IActionResult Index()
         {
+            var usermail = User.Identity.Name;
+            ViewBag.u = usermail;
+            Context c = new Context();
+            var writername = c.Writers.Where(x => x.WriterMail == usermail).Select(y => y.WriterName).FirstOrDefault();
+            ViewBag.wn = writername;
             return View();
         }
         public IActionResult Test()

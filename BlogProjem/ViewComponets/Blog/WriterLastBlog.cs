@@ -13,9 +13,9 @@ namespace BlogProjem.ViewComponets.Blog
     {
         BlogManager bm = new BlogManager(new EFBlogRepository());
 
-        public IViewComponentResult Invoke(int id)
+        public IViewComponentResult Invoke()
         {
-            var values = bm.GetBlogListByWriter(id);
+            var values = bm.GetBlogListByWriter(2);
             return View(values);
         }
     }

@@ -5,19 +5,16 @@
     @foreach (var item in Model)
     {
         <div class="recent-grids">
-            <div class="recent-grid">
-                <div class="wom">
-                    <a href="#"><img src="@item.BlogImage" alt=" " class="img-responsive" /></a>
+                <div class="recent-grid">
+                    <ul>
+                        <li><h4><a href="/Blog/BlogReadAll/@item.BlogID">@item.BlogTitle</a></h4></li>
+                        
+                        
+                    </ul>
+                
                 </div>
-                <div class="wom-right">
-                    <h4><a href="#">@item.BlogTitle</a></h4>
-                    <p>
-                        @item.BlogContent
-                    </p>
-                </div>
-
             </div>
-        </div>
+    
     }
     <div class="clearfix"> </div>
 
