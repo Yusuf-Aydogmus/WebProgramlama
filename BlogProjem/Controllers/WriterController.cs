@@ -1,4 +1,5 @@
-﻿using BusinessLayer.Concrete;
+﻿using BlogProjem.Models;
+using BusinessLayer.Concrete;
 using BusinessLayer.ValidationRules;
 using DataAccesLayer.EntitiyFramework;
 using EntityLayer.Concrete;
@@ -7,6 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -17,7 +19,7 @@ namespace BlogProjem.Controllers
     {
         WriterManager _writerManager = new WriterManager(new EFWriterRepository());
 
-     
+        [AllowAnonymous]
         public IActionResult Index()
         {
             return View();
@@ -63,6 +65,38 @@ namespace BlogProjem.Controllers
             }
             return View();
         }
+        [AllowAnonymous]
+        [HttpGet]
+        public IActionResult WriterAdd()
+        {
+            return View();
+        }
+        [AllowAnonymous]
+        [HttpPost]
+        public IActionResult WriterAdd(AddProfileImage writer)
+        {
+            Writer writermodel = new Writer();
+            if (writer.WriterImage != null)
+            {
+                var path = Path.GetExtension(writer.WriterImage.FileName);
+                var newimageName = Guid.NewGuid() + path;
+                //Guid: Globally Unique Identifer benzersiz bir tanımlayıcı yapısı sağlar
+                var pwd = Path.Combine(Directory.GetCurrentDirectory(),
+                    "wwwroot/WriterImage/", newimageName);
+                var stream = new FileStream(pwd, FileMode.Create);
+                writer.WriterImage.CopyTo(stream);
+                writermodel.WriterImage = newimageName;
+            }
+            writermodel.WriterMail = writer.WriterMail;
+            writermodel.WriterName = writer.WriterName;
+            writermodel.WriterPassword  = writer.WriterPassword;
+            writermodel.WriterStatus = writer.WriterStatus;
+            writermodel.WriterAbout = writer.WriterAbout;
+
+            _writerManager.GAdd(writermodel);
+            return RedirectToAction("BlogListByWriter", "Blog");
+        }
+
 
     }
 }

@@ -29,6 +29,7 @@
   <ItemGroup>
     <Folder Include="Views\Shared\Components\Category\" />
     <Folder Include="wwwroot\Login\css\" />
+    <Folder Include="wwwroot\WriterImage\" />
   </ItemGroup>
 
 </Project>

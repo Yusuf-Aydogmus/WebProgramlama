@@ -23,20 +23,16 @@
 
       
         <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
+            <a class="nav-link" asp-controller="Blog" asp-action="Index">
                 <i class="menu-icon mdi mdi-table"></i>
                 <span class="menu-title">Siteye Dön</span>
-                <i class="menu-arrow"></i>
+              
             </a>
-            <div class="collapse" id="tables">
-                <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="~/writer/template/pages/tables/basic-table.html">Basic table</a></li>
-                </ul>
-            </div>
+            
         </li>
         <li class="nav-item nav-category">Profil</li>
         <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
+            <a class="nav-link" asp-controller="Writer" asp-action="WriterEditProfile" aria-controls="auth">
                 <i class="menu-icon mdi mdi-account-circle-outline"></i>
                 <span class="menu-title">Profilime Dön</span>
             </a>
@@ -50,7 +46,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="http://bootstrapdash.com/demo/star-admin2-free/docs/documentation.html">
+            <a class="nav-link" asp-controller="Login" asp-action="Logout" >
                 <i class="menu-icon mdi mdi-logout-variant"></i>
                 <span class="menu-title">çıkış Yap</span>
             </a>
