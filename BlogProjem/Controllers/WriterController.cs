@@ -19,6 +19,7 @@ namespace BlogProjem.Controllers
     public class WriterController : Controller
     {
         WriterManager _writerManager = new WriterManager(new EFWriterRepository());
+        
 
         [Authorize]
         public IActionResult Index()
@@ -44,14 +45,18 @@ namespace BlogProjem.Controllers
         {
             return PartialView();
         }
-        [AllowAnonymous]
+     
         [HttpGet]
         public IActionResult WriterEditProfile()
         {
-            var wv = _writerManager.GGetById(2);
+            Context c = new Context();
+            var usermail = User.Identity.Name;
+            var writerId = c.Writers.Where(x => x.WriterMail == usermail).Select(y => y.WriterID).FirstOrDefault();
+
+            var wv = _writerManager.GGetById(writerId);
             return View(wv);
         }
-        [AllowAnonymous]
+       
         [HttpPost]
         public IActionResult WriterEditProfile( Writer writer)
         {

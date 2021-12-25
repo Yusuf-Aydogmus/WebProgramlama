@@ -17,8 +17,9 @@ namespace BlogProjem.ViewComponets.Writer
         {
 
             var usermail = User.Identity.Name;
+            var writerId = c.Writers.Where(x => x.WriterMail == usermail).Select(y => y.WriterID).FirstOrDefault();
 
-            var abouts = writerManager.GetWriterByID(2);
+            var abouts = writerManager.GetWriterByID(writerId);
             return View(abouts);
         }
 
