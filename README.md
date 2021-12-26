@@ -1,7 +1,7 @@
 # WebProgramlama
 2021 Web Programlama proje ödevi
-
-G191210071
+Yusuf Aydoğmuş
+G191210071 1/B
 
 
 
