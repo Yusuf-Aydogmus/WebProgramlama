@@ -1,9 +1,7 @@
 # WebProgramlama
-2021 Web Programlama ilk yükleme
+2021 Web Programlama proje ödevi
+
+G191210071
 
 
-Eksik olan kısımlar
-Login kısmı doğrulama ve yetkilendirilme gerçekleştirilmeli,
-Yorum yap kısmı eklencek,
-Localization dil olayı eklenecek
-Temel görüntü iyileştirilecek.
+
