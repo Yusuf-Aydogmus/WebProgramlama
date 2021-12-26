@@ -1,4 +1,39 @@
-﻿<nav class="sidebar sidebar-offcanvas" id="sidebar">
+﻿
+<nav class="navbar default-layout col-lg-12 col-12 p-0 fixed-top d-flex align-items-top flex-row">
+    <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-start">
+        <div class="me-3">
+            <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-bs-toggle="minimize">
+                <span class="icon-menu"></span>
+            </button>
+        </div>
+        <div>
+            <a class="navbar-brand brand-logo" href="~/writer/template/index.html">
+                <img src="~/writer/template/images/logo.svg" alt="logo" />
+            </a>
+            <a class="navbar-brand brand-logo-mini" href="~/writer/template/index.html">
+                <img src="~/writer/template/images/logo-mini.svg" alt="logo" />
+            </a>
+        </div>
+    </div>
+    <div class="navbar-menu-wrapper d-flex align-items-top">
+        <ul class="navbar-nav">
+            <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
+
+                    <h1 class="welcome-text">Hoş Geldiniz</h1>
+                    
+         
+
+            </li>
+        </ul>
+
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-bs-toggle="offcanvas">
+            <span class="mdi mdi-menu"></span>
+        </button>
+    </div>
+</nav>
+
+
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
     <ul class="nav">
         <li class="nav-item">
             <a class="nav-link" asp-controller="Dashboard" asp-action="Index">
@@ -15,20 +50,20 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link"  href="/Blog/BlogAdd">
+            <a class="nav-link" href="/Blog/BlogAdd">
                 <i class="menu-icon mdi mdi-file-plus"></i>
                 <span class="menu-title">Blog Ekle</span>
             </a>
         </li>
 
-      
+
         <li class="nav-item">
             <a class="nav-link" asp-controller="Blog" asp-action="Index">
                 <i class="menu-icon mdi mdi-table"></i>
                 <span class="menu-title">Siteye Dön</span>
-              
+
             </a>
-            
+
         </li>
         <li class="nav-item nav-category">Profil</li>
         <li class="nav-item">
@@ -36,7 +71,7 @@
                 <i class="menu-icon mdi mdi-account-circle-outline"></i>
                 <span class="menu-title">Profilime Dön</span>
             </a>
-   
+
         </li>
         <li class="nav-item nav-category">Genel</li>
         <li class="nav-item">
@@ -46,7 +81,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" asp-controller="Login" asp-action="Logout" >
+            <a class="nav-link" asp-controller="Login" asp-action="Logout">
                 <i class="menu-icon mdi mdi-logout-variant"></i>
                 <span class="menu-title">çıkış Yap</span>
             </a>

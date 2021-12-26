@@ -19,16 +19,12 @@ namespace BlogProjem.Controllers
     public class WriterController : Controller
     {
         WriterManager _writerManager = new WriterManager(new EFWriterRepository());
-        
+        Context c = new Context();
 
         [Authorize]
         public IActionResult Index()
         {
-            var usermail = User.Identity.Name;
-            ViewBag.u = usermail;
-            Context c = new Context();
-            var writername = c.Writers.Where(x => x.WriterMail == usermail).Select(y => y.WriterName).FirstOrDefault();
-            ViewBag.wn = writername;
+            
             return View();
         }
         public IActionResult Test()
@@ -38,6 +34,12 @@ namespace BlogProjem.Controllers
         [AllowAnonymous]
         public PartialViewResult WriterNavbarPartial()
         {
+            var usermail = User.Identity.Name;
+            TempData["mail"] = usermail;
+
+            var writername = c.Writers.Where(x => x.WriterMail == usermail).Select(y => y.WriterName).FirstOrDefault();
+            TempData["name"] = writername;
+
             return PartialView();
         }
         [AllowAnonymous]
@@ -49,7 +51,7 @@ namespace BlogProjem.Controllers
         [HttpGet]
         public IActionResult WriterEditProfile()
         {
-            Context c = new Context();
+            
             var usermail = User.Identity.Name;
             var writerId = c.Writers.Where(x => x.WriterMail == usermail).Select(y => y.WriterID).FirstOrDefault();
 

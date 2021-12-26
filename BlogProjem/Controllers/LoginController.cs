@@ -36,7 +36,7 @@ namespace BlogProjem.Controllers
 
                 };
 
-                var userIdentity = new ClaimsIdentity(claims, "a");
+                var userIdentity = new ClaimsIdentity(claims, "b");
 
                 ClaimsPrincipal principal = new ClaimsPrincipal(userIdentity);
                 await HttpContext.SignInAsync(principal);
@@ -46,6 +46,12 @@ namespace BlogProjem.Controllers
             {
                 return View();
             }
+        }
+        [HttpPost]
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync();
+            return RedirectToAction("Index", "Login");
         }
 
     }
